@@ -3,11 +3,11 @@
     "version": "0.3.0-alpha",
     "private": true,
     "scripts": {
-        "dev": "npm ci && next dev",
-        "lint": "npm ci && next lint",
-        "build": "npm ci && next build",
-        "start": "npm ci && next start",
-        "export": "npm ci && next export",
+        "dev": "next dev",
+        "lint": "next lint",
+        "build": "next build",
+        "start": "next start",
+        "export": "next export",
         "build-and-start": "npm ci && next build && next start"
     },
     "dependencies": {
