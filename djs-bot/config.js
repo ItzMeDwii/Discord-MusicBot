@@ -74,7 +74,7 @@ module.exports = {
 		{
 			identifier: process.env.LAVALINK_NAME_1, // log id string
 			host: process.env.LAVALINK_HOST_1,
-			port: process.env.LAVALINK_PORT_1,
+			port: parseInt(process.env.LAVALINK_PORT_1),
 			password: process.env.LAVALINK_PASSWORD_1,
 			retryAmount: 15, // for lavalink connection attempts
 			retryDelay: 6000, // Delay between reconnect attempts if connection is lost.
