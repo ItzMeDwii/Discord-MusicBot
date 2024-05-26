@@ -6,7 +6,7 @@ module.exports = {
 	/**
 	 * Name of the bot 
 	 * @type {string} */
-	name: "InsertNameHereBot",
+	name: "BukanJukebox",
 	/**
 	 * Database option (mongodb, postgresql) https://www.prisma.io/docs/reference/database-reference/connection-urls
 	 * @type {string} */
@@ -72,23 +72,14 @@ module.exports = {
 	 * @type {import("erela.js").Node[]} */
 	nodes: [
 		{
-			identifier: "DockerNode", // log id string
-			host: "docker.lavalink",
-			port: 2333,
-			password: "youshallnotpass",
+			identifier: process.env.LAVALINK_NAME_1, // log id string
+			host: process.env.LAVALINK_HOST_1,
+			port: process.env.LAVALINK_PORT_1,
+			password: process.env.LAVALINK_PASSWORD_1,
 			retryAmount: 15, // for lavalink connection attempts
 			retryDelay: 6000, // Delay between reconnect attempts if connection is lost.
 			secure: false, // if lavalink is running SSL
-		},
-		{
-			identifier: "LocalNode", // log id string
-			host: "localhost",
-			port: 2333,
-			password: "youshallnotpass",
-			retryAmount: 15, // for lavalink connection attempts
-			retryDelay: 6000, // Delay between reconnect attempts if connection is lost.
-			secure: false, // if lavalink is running SSL
-		},
+		}
 	],
 
 	/** 
@@ -111,7 +102,7 @@ module.exports = {
 	* @type {import("discord.js").PermissionResolvable | bigint} 
 	* @see https://discord.com/developers/docs/topics/permissions#permissions
 	*/
-	permissions: 0, // 8 = Administrator, 0 = Doesn't need permissions (uses slash commands)
+	permissions: 2205281600, // 8 = Administrator, 0 = Doesn't need permissions (uses slash commands)
 
 	/**
 	 * Other parameters used variously throughout the bot
@@ -146,7 +137,7 @@ module.exports = {
 		 */
 		activities: [
 			{
-				name: "{someVariable} servers",
+				name: "{someVariable} servers | /help",
 				type: "WATCHING",
 				data: (client) => {
 					return {
@@ -155,7 +146,7 @@ module.exports = {
 				}
 			},
 			{
-				name: "Music",
+				name: "Music | /help",
 				type: "LISTENING",
 			}
 		],
