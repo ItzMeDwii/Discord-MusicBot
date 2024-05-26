@@ -150,11 +150,11 @@ module.exports = {
 			{
 				name: "Credits",
 				value:
-					`Discord Music Bot Version: v${
+					`Discord Music Bot Version: \`v${
 						require("../../package.json").version
-					}; Build: ${gitHash}` +
+					}\` Build: \`${gitHash}\`` +
 					"\n" +
-					`[✨ Support Server](https://discord.gg/sbySMS7m3v) | [Issues](https://github.com/SudhanPlayz/Discord-MusicBot/issues) | [Source](https://github.com/SudhanPlayz/Discord-MusicBot/tree/v5) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${
+					`[Issues](https://github.com/ItzMeDwii/Discord-MusicBot/issues) | [Source Code](https://github.com/SudhanPlayz/Discord-MusicBot/tree/v5) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${
 						client.config.clientId
 					}&permissions=${
 						client.config.permissions
