@@ -1,6 +1,6 @@
 import { app, wsApp } from './index';
 
-const API_PORT = 3000;
+const API_PORT = 3001;
 const WS_PORT = 8080;
 
 const server = app();
